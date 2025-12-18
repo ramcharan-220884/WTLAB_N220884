@@ -149,6 +149,7 @@ main {
   gap: 20px;
   padding: 40px;
   justify-content: center;
+  position: relative;
 }
 
 .card {
@@ -160,10 +161,82 @@ main {
   border: 1px solid #555 ;
 }
 
+.feature-section {
+  background-color: #f0f0f0;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+.feature-section video{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.9;
+}
+
 .feature-section h2 {
   font-size: 3rem;
+  color: #ffffff;
 }
 
 .card img {
   width: 5rem;
+}
+
+.aud{
+  display: block;
+  margin: 2rem auto;
+  background-color: #f4f;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px;
+  padding: 1rem;
+}
+
+.vid{
+  height: 20rem;
+  width: 20rem;
+  display: block;
+  margin: 2rem auto;
+  border: 2px solid #333;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px;
+  object-fit: cover;
+}
+
+
+.terms-wrapper {
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #F7F5F2;              
+  border-radius: 22px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.terms-wrapper h2 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #0F766E;                    
+  margin-bottom: 25px;
+}
+
+.terms-wrapper iframe {
+  width: 100%;
+  height: 650px;
+  border: none;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: inset 0 0 0 1px #D1D5DB;
+}
+
+.terms-note {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #6B7280;
 }
