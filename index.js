@@ -14,28 +14,23 @@ function plusSlides(n) {
   resetAutoSlide();
 }
 
-
 function currentSlide(n) {
   slideIndex = n - 1;
   showSlides(slideIndex);
   resetAutoSlide();
 }
 
-
 function showSlides(n) {
   if (n >= slides.length) slideIndex = 0;
   if (n < 0) slideIndex = slides.length - 1;
 
-
   slidesWrapper.style.transform = `translateX(-${slideIndex * 100}%)`;
 
-  
   for (let i = 0; i < dots.length; i++) {
     dots[i].classList.remove("active");
   }
   dots[slideIndex].classList.add("active");
 }
-
 
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
@@ -43,7 +38,6 @@ function startAutoSlide() {
     showSlides(slideIndex);
   }, 3000);
 }
-
 
 function resetAutoSlide() {
   clearInterval(autoSlideInterval);

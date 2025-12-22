@@ -21,104 +21,179 @@
         <p>Booking made Simple</p>
       </div>
 
-
       <!-- SLIDER CONTAINER -->
-  <div class="slideshow-container">
-    <div class="slides-container">
+      <div class="slideshow-container">
+        <div class="slides-container">
+          <!-- Slide 1 -->
+          <div class="mySlides">
+            <img src="./media_files/img1.jpg" alt="Slide 1" />
+            <div class="text">Caption Text 1</div>
+          </div>
 
-      <!-- Slide 1 -->
-      <div class="mySlides">
-        <img src="./media_files/img1.jpg" alt="Slide 1">
-        <div class="text">Caption Text 1</div>
+          <!-- Slide 2 -->
+          <div class="mySlides">
+            <img src="./media_files/img2.jpg" alt="Slide 2" />
+            <div class="text">Caption Text 2</div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="mySlides">
+            <img src="./media_files/img3.jpg" alt="Slide 3" />
+            <div class="text">Caption Text 3</div>
+          </div>
+        </div>
+
+        <!-- NAV BUTTONS -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="mySlides">
-        <img src="./media_files/img2.jpg" alt="Slide 2">
-        <div class="text">Caption Text 2</div>
+      <!-- DOT INDICATORS -->
+      <div style="text-align: center; margin-top: 15px">
+        <span class="dot active" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
       </div>
 
-      <!-- Slide 3 -->
-      <div class="mySlides">
-        <img src="./media_files/img3.jpg" alt="Slide 3">
-        <div class="text">Caption Text 3</div>
-      </div>
+      <!-- features -->
 
-    </div>
+      <section class="feature-section">
+        <video controls class="vid" autoplay muted loop>
+          <source src="./media_files/video.mp4" />
+        </video>
+        <div class="features-content"></div>
+        <h2>Features</h2>
 
-    <!-- NAV BUTTONS -->
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
+        <div class="features">
+          <div class="card">
+            <img src="./media_files/easy-booking.png" alt="" />
+            <h3>Easy Booking</h3>
+            <p>Book your favorite spots with just a few clicks.</p>
+          </div>
+          <div class="card">
+            <img src="./media_files/support.png" alt="" />
+            <h3>24/7 Support</h3>
+            <p>Our support team is here to help you anytime.</p>
+          </div>
+          <div class="card">
+            <img src="./media_files/best-price.jpg" alt="" />
+            <h3>Best Prices</h3>
+            <p>We offer competitive prices for all bookings.</p>
+          </div>
+        </div>
+      </section>
 
-  </div>
+      <audio controls class="aud">
+        <source src="./media_files/welcome-traveler-97167.mp3" />
+      </audio>
 
-  <!-- DOT INDICATORS -->
-  <div style="text-align:center; margin-top: 15px;">
-    <span class="dot active" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
+      <section class="terms-wrapper">
+        <h2>Terms & Conditions</h2>
 
+        <iframe
+          src="./media_files/T and C.pdf"
+          title="Bookaroo Terms and Conditions"
+        >
+        </iframe>
 
-  <!-- features -->
+        <p class="terms-note">
+          Please read the terms carefully before proceeding with your booking.
+        </p>
+      </section>
 
-  <section class="feature-section">
-    <video controls class="vid" autoplay muted loop>
-    <source src="./media_files/video.mp4">
-  </video>
-    <h2>Features</h2>
+      <section class="tabular">
+        <table>
+          <caption>
+            Our Network Hotels
+          </caption>
 
-  <div class="features">
-    <div class="card">
-      <img src="./media_files/easy-booking.png" alt="">
-      <h3>Easy Booking</h3>
-      <p>Book your favorite spots with just a few clicks.</p>
-    </div>
-    <div class="card">
-      <img src="./media_files/support.png" alt="">
-      <h3>24/7 Support</h3>
-      <p>Our support team is here to help you anytime.</p>
+          <thead>
+            <tr>
+              <th>Hotel Name</th>
+              <th>Location</th>
+              <th>IMT Rating</th>
+              <th>IMT Standard</th>
+            </tr>
+          </thead>
 
-  </div>
-    <div class="card">
-      <img src="./media_files/best-price.jpg" alt="">
-      <h3>Best Prices</h3>
-      <p>We offer competitive prices for all bookings.</p>
-    </div>
-  </div>
-  </section>
-
-  <audio controls class="aud">
-    <source src="./media_files/welcome-traveler-97167.mp3">
-  </audio>
-
-  
-
-  <section class="terms-wrapper">
-  <h2>Terms & Conditions</h2>
-
-  <iframe 
-    src="./media_files/T and C.pdf"
-    title="Bookaroo Terms and Conditions">
-  </iframe>
-
-  <p class="terms-note">
-    Please read the terms carefully before proceeding with your booking.
-  </p>
-</section>
-
-
-
-  
+          <tbody>
+            <tr>
+              <td>ITC Narmada</td>
+              <td>Ahmedabad</td>
+              <td>5 ⭐</td>
+              <td>Luxury</td>
+            </tr>
+            <tr>
+              <td>Hotel Grand Cabbana</td>
+              <td>Amritsar</td>
+              <td>4.9 ⭐</td>
+              <td>Luxury</td>
+            </tr>
+            <tr>
+              <td>The Oberoi</td>
+              <td>Bengaluru</td>
+              <td>5 ⭐</td>
+              <td>Deluxe</td>
+            </tr>
+            <tr>
+              <td>Jehan Numa Palace</td>
+              <td>Bhopal</td>
+              <td>4.5 ⭐</td>
+              <td>Luxury</td>
+            </tr>
+            <tr>
+              <td>Taj Coromandel</td>
+              <td>Chennai</td>
+              <td>5 ⭐</td>
+              <td>Classic Luxury</td>
+            </tr>
+            <tr>
+              <td>The Leela Palace</td>
+              <td>Delhi</td>
+              <td>4.8 ⭐</td>
+              <td>Premium Luxury</td>
+            </tr>
+            <tr>
+              <td>The Fern Citrus Hotel</td>
+              <td>Goa</td>
+              <td>4.6 ⭐</td>
+              <td>Deluxe</td>
+            </tr>
+            <tr>
+              <td>Hyatt Regency</td>
+              <td>Hyderabad</td>
+              <td>4.7 ⭐</td>
+              <td>Premium Luxury</td>
+            </tr>
+            <tr>
+              <td>JW Marriott</td>
+              <td>Jaipur</td>
+              <td>5 ⭐</td>
+              <td>Luxury</td>
+            </tr>
+            <tr>
+              <td>Radisson Blu</td>
+              <td>Kolkata</td>
+              <td>4.5 ⭐</td>
+              <td>Deluxe</td>
+            </tr>
+            <tr>
+              <td>The St. Regis</td>
+              <td>Mumbai</td>
+              <td>5 ⭐</td>
+              <td>Ultra Luxury</td>
+            </tr>
+            <tr>
+              <td>Taj Mahal Palace</td>
+              <td>Pune</td>
+              <td>4.9 ⭐</td>
+              <td>Premium Luxury</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
     </main>
 
     <script src="index.js"></script>
   </body>
 </html>
-
-
-
-
-
-
-  
