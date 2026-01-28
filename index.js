@@ -8,7 +8,7 @@ const dots = document.getElementsByClassName("dot");
 showSlides(slideIndex);
 startAutoSlide();
 
-function plusSlides(n) {
+const plusSlides = (n)=> {
   slideIndex += n;
   showSlides(slideIndex);
   resetAutoSlide();
@@ -43,3 +43,21 @@ function resetAutoSlide() {
   clearInterval(autoSlideInterval);
   startAutoSlide();
 }
+
+
+(function(){
+  alert("Welcome to Bookaroo! Carefully read the T&C");
+})();
+
+
+function goToLogin() {
+  window.location.href = "login.html"
+}
+
+function goToSignup() {
+  window.location.href = "login.html#signup"
+}
+
+
+
+  

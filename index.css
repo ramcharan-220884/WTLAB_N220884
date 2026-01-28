@@ -48,6 +48,17 @@ body {
   padding: 14px 16px;
   text-decoration: none;
 }
+.login-btn,.signup-btn {
+  margin-top: 10px;
+  font-size: 1rem;
+  border-radius: 10px;
+  padding: 7px;
+
+}
+.login-btn:hover,.signup-btn:hover {
+  background-color: goldenrod;
+}
+
 .hero {
   margin-top: 5rem;
   position: relative;
