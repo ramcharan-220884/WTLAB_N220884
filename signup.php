@@ -1,12 +1,9 @@
 <?php
+session_start();
 include "db.php";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    $name = strtolower($name);
     $name     = trim($_POST['name']);
     $email    = trim($_POST['email']);
     $password = trim($_POST['password']);
@@ -19,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Name must contain only alphabets");
     }
 
-    if (!str_contains($email, '@') || !str_contains($email, '.')) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         die("Invalid email format");
     }
 
@@ -27,22 +24,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Password must be at least 6 characters long");
     }
 
-    $name  = htmlspecialchars($name);
-    $email = htmlspecialchars($email);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-    echo "Registration Successful<br>";
-    echo "Name: " . ucfirst($name) . "<br>";
-    echo "Email: " . $email;
-}
+    $stmt = $conn->prepare("INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $name, $email, $hashedPassword);
 
-
-    $sql = "INSERT INTO users (full_name, email, password)
-            VALUES ('$name', '$email', '$password')";
-
-    if (mysqli_query($conn, $sql)) {
-        echo "Signup successful";
+    if ($stmt->execute()) {
+        echo "Signup successful. <a href='login.php'>Login here</a>";
     } else {
-        echo "Error: " . mysqli_error($conn);
+        echo "Error: " . $stmt->error;
     }
-    mysqli_close($conn);
+
+    $stmt->close();
+    $conn->close();
+}
 ?>
