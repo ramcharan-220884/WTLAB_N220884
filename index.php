@@ -1,0 +1,220 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bookaroo</title>
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+
+<nav class="navbar">
+  <ul>
+    <li><a href="/WTLAB_N220884/index.php">Home</a></li>
+    <li><a href="#">Explore</a></li>
+    <li><a href="#">Booking Status</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="file-manager.php">File Manager</a></li>
+
+    <?php if(isset($_SESSION['user_email'])): ?>
+
+        <li style="color:white; padding-top:14px;">
+            Welcome, <?php echo $_SESSION['user_name']; ?>
+        </li>
+
+        <li>
+            <a href="logout.php">
+                <button class="login-btn">Logout</button>
+            </a>
+        </li>
+
+    <?php else: ?>
+
+        <li>
+            <a href="/WTLAB_N220884/auth.php">
+                <button class="login-btn">Login</button>
+            </a>
+        </li>
+
+        <li>
+            <a href="/WTLAB_N220884/auth.php">
+                <button class="signup-btn">Sign Up</button>
+            </a>
+        </li>
+
+    <?php endif; ?>
+
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-overlay"></div>
+
+  <div class="welcome-message hero-content">
+    <h1>Welcome to Bookaroo</h1>
+    <p>Booking made Simple</p>
+
+    <form class="search-form">
+      <div class="form-group">
+        <label>Where are you travelling?</label>
+        <input type="text" placeholder="Enter destination" />
+      </div>
+
+      <div class="form-group">
+        <label>Travel date</label>
+        <input type="date" />
+      </div>
+
+      <div class="form-group dropdown">
+        <label>Members</label>
+        <div class="dropdown-box">
+          <span>Adults: <strong>2</strong></span>
+          <span>Children: <strong>0</strong></span>
+        </div>
+
+        <div class="dropdown-panel">
+          <div class="counter">
+            <span>Adults</span>
+            <input type="number" min="1" value="2" />
+          </div>
+          <div class="counter">
+            <span>Children</span>
+            <input type="number" min="0" value="0" />
+          </div>
+        </div>
+      </div>
+
+      <button type="submit">Search Hotels</button>
+    </form>
+  </div>
+</section>
+
+<main>
+
+<section class="slider-section">
+  <div class="slideshow-container">
+    <div class="slides-container">
+
+      <div class="mySlides">
+        <img src="./media_files/img1.jpg" alt="Slide 1" />
+        <div class="text">Caption Text 1</div>
+      </div>
+
+      <div class="mySlides">
+        <img src="./media_files/img2.jpg" alt="Slide 2" />
+        <div class="text">Caption Text 2</div>
+      </div>
+
+      <div class="mySlides">
+        <img src="./media_files/img3.jpg" alt="Slide 3" />
+        <div class="text">Caption Text 3</div>
+      </div>
+
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+  </div>
+
+  <div style="text-align: center; margin-top: 15px">
+    <span class="dot active" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+</section>
+
+<section class="feature-section">
+  <video controls class="vid" autoplay muted loop>
+    <source src="./media_files/video.mp4" />
+  </video>
+
+  <h2>Features</h2>
+
+  <div class="features">
+    <div class="card">
+      <img src="./media_files/easy-booking.png" alt="" />
+      <h3>Easy Booking</h3>
+      <p>Book your favorite spots with just a few clicks.</p>
+    </div>
+
+    <div class="card">
+      <img src="./media_files/support.png" alt="" />
+      <h3>24/7 Support</h3>
+      <p>Our support team is here to help you anytime.</p>
+    </div>
+
+    <div class="card">
+      <img src="./media_files/best-price.jpg" alt="" />
+      <h3>Best Prices</h3>
+      <p>We offer competitive prices for all bookings.</p>
+    </div>
+  </div>
+</section>
+
+<audio controls autoplay class="aud">
+  <source src="./media_files/welcome-traveler-97167.mp3" />
+</audio>
+
+<section class="terms-wrapper">
+  <h2>Terms & Conditions</h2>
+  <iframe src="./media_files/T and C.pdf"></iframe>
+  <p class="terms-note">
+    Please read the terms carefully before proceeding with your booking.
+  </p>
+</section>
+
+<section class="tabular">
+  <table>
+    <caption>Our Network Hotels</caption>
+    <thead>
+      <tr>
+        <th>Hotel Name</th>
+        <th>Location</th>
+        <th>IMT Rating</th>
+        <th>IMT Standard</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="alternate"><td>ITC Narmada</td><td>Ahmedabad</td><td>5 ⭐</td><td>Luxury</td></tr>
+      <tr><td>Hotel Grand Cabbana</td><td>Amritsar</td><td>4.9 ⭐</td><td>Luxury</td></tr>
+      <tr class="alternate"><td>The Oberoi</td><td>Bengaluru</td><td>5 ⭐</td><td>Deluxe</td></tr>
+      <tr><td>Jehan Numa Palace</td><td>Bhopal</td><td>4.5 ⭐</td><td>Luxury</td></tr>
+      <tr class="alternate"><td>Taj Coromandel</td><td>Chennai</td><td>5 ⭐</td><td>Classic Luxury</td></tr>
+      <tr><td>The Leela Palace</td><td>Delhi</td><td>4.8 ⭐</td><td>Premium Luxury</td></tr>
+      <tr class="alternate"><td>The Fern Citrus Hotel</td><td>Goa</td><td>4.6 ⭐</td><td>Deluxe</td></tr>
+      <tr><td>Hyatt Regency</td><td>Hyderabad</td><td>4.7 ⭐</td><td>Premium Luxury</td></tr>
+      <tr class="alternate"><td>JW Marriott</td><td>Jaipur</td><td>5 ⭐</td><td>Luxury</td></tr>
+      <tr><td>Radisson Blu</td><td>Kolkata</td><td>4.5 ⭐</td><td>Deluxe</td></tr>
+      <tr class="alternate"><td>The St. Regis</td><td>Mumbai</td><td>5 ⭐</td><td>Ultra Luxury</td></tr>
+      <tr><td>Taj Mahal Palace</td><td>Pune</td><td>4.9 ⭐</td><td>Premium Luxury</td></tr>
+    </tbody>
+  </table>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-content">
+    <h3>Bookaroo</h3>
+    <p>Booking made simple.</p>
+
+    <ul class="footer-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Explore</a></li>
+      <li><a href="#">Booking Status</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+
+    <span class="footer-copy">
+      © 2025 Bookaroo. All rights reserved.
+    </span>
+  </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

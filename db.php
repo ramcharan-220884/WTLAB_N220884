@@ -1,12 +1,11 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = ""; 
-$dbname = "bookaroo_db";
+require __DIR__ . '/vendor/autoload.php';
 
-$conn = mysqli_connect($host, $user, $password, $dbname);
+$client = new MongoDB\Client("mongodb://localhost:27017");
 
-if (!$conn) {
-    die("Database Connection Failed: " . mysqli_connect_error());
-}
+$db = $client->bookaroo_db;
+
+$users = $db->users;
+$rooms = $db->rooms;
+$bookings = $db->bookings;
 ?>
