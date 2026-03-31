@@ -31,7 +31,7 @@ function showSlides(n) {
   }
   dots[slideIndex].classList.add("active");
 }
-
+//slider function
 function startAutoSlide() {
   autoSlideInterval = setInterval(() => {
     slideIndex++;
