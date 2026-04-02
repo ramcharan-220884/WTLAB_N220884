@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Style Manipulation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html" style="color: var(--primary);">Style</a></li>
+            <li><a href="traversing.html">Traversing</a></li>
+            <li><a href="effects.html">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container" id="main-container">
+        <h1 id="pageTitle">🎨 Style Manipulation</h1>
+
+        <div class="demo-card" id="css-methods">
+            <h3 id="css-title">1. Direct CSS: <code>css()</code></h3>
+            <div id="style-box" class="box" style="margin: 20px auto; border: 2px solid transparent;">Box</div>
+            <div class="btn-group" id="css-btns">
+                <button id="btn-red" title="Set color to red">Color Red</button>
+                <button id="btn-blue" title="Set color to blue">Color Blue</button>
+                <button id="btn-rounded" title="Set border-radius">Rounded Corners</button>
+                <button id="btn-reset-style" title="Reset styles">Reset Style</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="class-methods">
+            <h3 id="class-title">2. Class Methods: <code>addClass()</code>, <code>removeClass()</code>, <code>toggleClass()</code></h3>
+            <p id="class-text" style="padding: 10px; border-radius: 8px;">Target text for class manipulation.</p>
+            <div class="btn-group" id="class-btns">
+                <button id="btn-add-class" title="Adds .highlight class">Add Highlight</button>
+                <button id="btn-remove-class" title="Removes .highlight class">Remove Highlight</button>
+                <button id="btn-toggle-class" title="Toggles .highlight class">Toggle Highlight</button>
+                <button id="btn-has-class" title="Checks if .highlight exists">Has Highlight?</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

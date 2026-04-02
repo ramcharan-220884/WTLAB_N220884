@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Traversing</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .ancestor * { display: block; border: 2px solid lightgrey; color: lightgrey; padding: 5px; margin: 15px; }
+        .active-traverse { border: 2px solid var(--primary) !important; color: var(--primary) !important; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="traversing.html" style="color: var(--primary);">Traversing</a></li>
+            <li><a href="effects.html">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container" id="main-container">
+        <h1 id="pageTitle">🌳 DOM Traversing</h1>
+
+        <div class="demo-card" id="parent-traversal">
+            <h3 id="parent-title">1. Parent Traversal</h3>
+            <div class="ancestor" id="grandparent" style="width:500px;">
+                Grandparent (div)
+                <ul id="parent-ul">
+                    Direct Parent (ul)
+                    <li id="child-li">
+                        Child (li)
+                        <span id="target-span">Target (span)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <button id="btn-parent" title="Immediate parent"><code>parent()</code></button>
+                <button id="btn-parents" title="All ancestors"><code>parents()</code></button>
+                <button id="btn-parentsUntil" title="Ancestors until Grandparent"><code>parentsUntil()</code></button>
+                <button id="btn-reset-parents" style="background:#ef4444;">Reset</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="children-traversal">
+            <h3 id="children-title">2. Children & Sibling Traversal</h3>
+            <div id="sibling-container" class="ancestor">
+                <p id="p-first">First Paragraph</p>
+                <p id="p-target">Target Paragraph</p>
+                <p id="p-third">Third Paragraph</p>
+                <p id="p-last">Last Paragraph</p>
+            </div>
+            <div class="btn-group">
+                <button id="btn-children" title="Direct children"><code>children()</code></button>
+                <button id="btn-find" title="Find p inside"><code>find("p")</code></button>
+                <button id="btn-siblings" title="All siblings"><code>siblings()</code></button>
+                <button id="btn-next" title="Immediately next"><code>next()</code></button>
+                <button id="btn-nextAll" title="All following siblings"><code>nextAll()</code></button>
+                <button id="btn-nextUntil" title="Followers until Last"><code>nextUntil()</code></button>
+                <button id="btn-prev" title="Immediately previous"><code>prev()</code></button>
+                <button id="btn-prevAll" title="All preceding siblings"><code>prevAll()</code></button>
+                <button id="btn-prevUntil" title="Preceders until First"><code>prevUntil()</code></button>
+                <button id="btn-reset-siblings" style="background:#ef4444;">Reset</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="filtering-methods">
+            <h3 id="filtering-title">3. Filtering Methods</h3>
+            <div id="filter-box" class="ancestor">
+                <div class="test-div">Div 1</div>
+                <div class="test-div special">Div 2 (Special)</div>
+                <div class="test-div">Div 3</div>
+                <div class="test-div special">Div 4 (Special)</div>
+            </div>
+            <div class="btn-group">
+                <button id="btn-first-fil" title="First matching element"><code>first()</code></button>
+                <button id="btn-last-fil" title="Last matching element"><code>last()</code></button>
+                <button id="btn-eq-fil" title="Element at index 1"><code>eq(1)</code></button>
+                <button id="btn-filter" title="Filter by .special"><code>filter(".special")</code></button>
+                <button id="btn-not-fil" title="Exclude .special"><code>not(".special")</code></button>
+                <button id="btn-reset-filter" style="background:#ef4444;">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

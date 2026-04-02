@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Welcome</title>
+    <meta name="description" content="A comprehensive laboratory for practicing jQuery selectors, attributes, events, traversing, and effects.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="traversing.html">Traversing</a></li>
+            <li><a href="effects.html">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container">
+        <div class="demo-card" id="welcomeSection">
+            <h1 id="mainTitle">🚀 Welcome to the jQuery Lab</h1>
+            <p>This interactive laboratory is designed to help you master <strong>jQuery fundamentals</strong>. Each section demonstrates a core concept of the library, from DOM manipulation to complex animations.</p>
+            
+            <h3 id="labSectionsTitle">Lab Sections</h3>
+            <ul id="labSectionList">
+                <li><strong>Selectors:</strong> Targeting elements with CSS-like precision.</li>
+                <li><strong>Attributes:</strong> Manipulating element properties and values.</li>
+                <li><strong>Events:</strong> Creating interactive user experiences.</li>
+                <li><strong>Style:</strong> Dynamic CSS manipulation and class toggling.</li>
+                <li><strong>Traversing:</strong> Navigating through the DOM tree.</li>
+                <li><strong>Effects:</strong> Adding smooth transitions and custom animations.</li>
+            </ul>
+
+            <div style="margin-top: 2rem;">
+                <a href="selectors.html"><button id="startBtn">Get Started with Selectors →</button></a>
+            </div>
+        </div>
+
+        <div class="demo-card" id="statusCard">
+            <h3 id="statusTitle">Current Task: Initial Setup</h3>
+            <p id="statusDesc">Project structure created and styling initialized. Ready to explore jQuery methods.</p>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

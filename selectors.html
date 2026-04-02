@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Selectors</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Explore jQuery's powerful CSS-style selectors for DOM elements.">
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html" style="color: var(--primary);">Selectors</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="traversing.html">Traversing</a></li>
+            <li><a href="effects.html">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container" id="main-container">
+        
+        <h1 id="pageTitle">🎯 jQuery Selectors</h1>
+
+        <div class="demo-card" id="basic-selectors">
+            <h3 id="basic-title">1. Basic Selectors</h3>
+            <p id="para1" class="intro-p">This is a paragraph with <code>id="para1"</code> and <code>class="intro-p"</code>.</p>
+            <ul id="basic-list">
+                <li class="item-cls">Item 1 (Class: item-cls)</li>
+                <li class="item-cls">Item 2 (Class: item-cls)</li>
+                <li id="item3">Item 3 (ID: item3)</li>
+            </ul>
+            <div class="btn-group">
+                <button id="btn-elem" title="Select all p tags"><code>$("p")</code></button>
+                <button id="btn-id" title="Select #para1"><code>$("#para1")</code></button>
+                <button id="btn-class" title="Select .item-cls"><code>$(".item-cls")</code></button>
+                <button id="btn-multiple" title="Select h1 and p"><code>$("h1, p")</code></button>
+                <button id="btn-reset-basic" style="background: #ef4444;">Reset</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="hierarchy-selectors">
+            <h3 id="hierarchy-title">2. Hierarchy Selectors</h3>
+            <div id="parent-box" class="parent-container">
+                <p id="child1">Immediate Child Paragraph</p>
+                <div id="child-div">
+                    <p id="grandchild1">Nested Paragraph</p>
+                </div>
+                <div id="sibling1">First Sibling Div</div>
+                <div id="sibling2">Second Sibling Div</div>
+            </div>
+            <div class="btn-group">
+                <button id="btn-space" title="Ancestor descendant"><code>$("parent child")</code></button>
+                <button id="btn-greater" title="Parent > immediate child"><code>$("parent > child")</code></button>
+                <button id="btn-plus" title="Prev + immediate next"><code>$("prev + next")</code></button>
+                <button id="btn-tilde" title="Prev ~ all siblings"><code>$("prev ~ siblings")</code></button>
+                <button id="btn-reset-hierarchy" style="background: #ef4444;">Reset</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="filter-selectors">
+            <h3 id="filter-title">3. Filter Selectors</h3>
+            <ul id="filter-list">
+                <li>Option 0 (Even)</li>
+                <li>Option 1 (Odd)</li>
+                <li>Option 2 (Even)</li>
+                <li>Option 3 (Odd)</li>
+                <li id="special-li">Option 4 (Even / Special)</li>
+            </ul>
+            <div class="btn-group">
+                <button id="btn-first" title="Select first element"><code>:first</code></button>
+                <button id="btn-last" title="Select last element"><code>:last</code></button>
+                <button id="btn-eq" title="Select at index 2"><code>:eq(2)</code></button>
+                <button id="btn-even" title="Select even indices"><code>:even</code></button>
+                <button id="btn-odd" title="Select odd indices"><code>:odd</code></button>
+                <button id="btn-not" title="Select all except #special-li"><code>:not()</code></button>
+                <button id="btn-reset-filter" style="background: #ef4444;">Reset</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="attribute-selectors">
+            <h3 id="attribute-title">4. Attribute Selectors</h3>
+            <div id="attr-demo-box">
+                <input type="text" placeholder="Enter name" name="user-name" id="name-input">
+                <input type="text" placeholder="Email address" name="user-email" id="email-input">
+                <input type="text" placeholder="Job Title" name="emp-title" id="title-input">
+                <a href="https://google.com" target="_blank" id="external-link">Google</a>
+            </div>
+            <div class="btn-group">
+                <button id="btn-has-attr" title="Has name attribute"><code>[name]</code></button>
+                <button id="btn-attr-val" title="name exactly 'user-name'"><code>[name="user-name"]</code></button>
+                <button id="btn-attr-start" title="name starts with 'user'"><code>[name^="user"]</code></button>
+                <button id="btn-attr-end" title="name ends with 'email'"><code>[name$="email"]</code></button>
+                <button id="btn-attr-contain" title="name contains 'title'"><code>[name*="title"]</code></button>
+                <button id="btn-reset-attr" style="background: #ef4444;">Reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

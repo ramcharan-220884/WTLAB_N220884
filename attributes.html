@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Attributes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="attributes.html" style="color: var(--primary);">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="traversing.html">Traversing</a></li>
+            <li><a href="effects.html">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container" id="main-container">
+        <h1 id="pageTitle">🏷️ Attribute Methods</h1>
+
+        <div class="demo-card" id="attr-demo-card">
+            <h3 id="attr-section-title">1. Manipulating Attributes: <code>attr()</code> & <code>removeAttr()</code></h3>
+            <p id="image-container">
+                <img id="demo-img" src="https://picsum.photos/id/1/200/200" alt="Sample Image" style="border-radius: 12px;">
+            </p>
+            <div class="btn-group">
+                <button id="btn-change-src" title="Change src attribute">Change Image Source</button>
+                <button id="btn-remove-alt" title="Remove alt attribute">Remove Alt Attribute</button>
+                <button id="btn-get-attr" title="Display current src value">Get Image Source</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="prop-demo-card">
+            <h3 id="prop-section-title">2. Properties: <code>prop()</code></h3>
+            <div id="check-group" class="group-demo">
+                <input type="checkbox" id="accept-terms"> <label for="accept-terms">Accept Terms and Conditions</label>
+            </div>
+            <div class="btn-group">
+                <button id="btn-check" title="Check checkbox">Check Checkbox</button>
+                <button id="btn-uncheck" title="Uncheck checkbox">Uncheck Checkbox</button>
+                <button id="btn-toggle-check" title="Toggle check state">Toggle Checkbox</button>
+                <button id="btn-is-checked" title="Check if checked">Is Checked?</button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="val-demo-card">
+            <h3 id="val-section-title">3. Input Values: <code>val()</code></h3>
+            <p id="input-demo">
+                <input type="text" id="user-input" placeholder="Type something here..." value="Initial value">
+            </p>
+            <div class="btn-group">
+                <button id="btn-get-val" title="Get input value">Retrieve Input Value</button>
+                <button id="btn-set-val" title="Set input value">Set Input Value</button>
+                <button id="btn-clear-val" title="Clear input value">Clear value</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

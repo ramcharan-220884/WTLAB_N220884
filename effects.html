@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Lab | Effects</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .demo-box { width: 100px; height: 100px; background: var(--primary); border-radius: 12px; margin: 20px auto; position: relative; }
+    </style>
+</head>
+<body>
+
+    <nav id="mainNav">
+        <h2 id="logoText">jQuery Lab</h2>
+        <ul id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="selectors.html">Selectors</a></li>
+            <li><a href="attributes.html">Attributes</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="style.html">Style</a></li>
+            <li><a href="traversing.html">Traversing</a></li>
+            <li><a href="effects.html" style="color: var(--primary);">Effects</a></li>
+        </ul>
+        <button id="themeToggle" title="Toggle Theme">🌙</button>
+    </nav>
+
+    <div class="container" id="main-container">
+        <h1 id="pageTitle">✨ jQuery Effects & Animation</h1>
+
+        <div class="demo-card" id="basic-effects-card">
+            <h3 id="basic-title">1. Basic Effects</h3>
+            <div id="basic-box" class="demo-box" style="display: block;"></div>
+            <div class="btn-group">
+                <button id="btn-hide" title="Hide instantly"><code>hide()</code></button>
+                <button id="btn-show" title="Show instantly"><code>show()</code></button>
+                <button id="btn-toggle" title="Toggle visibility"><code>toggle()</code></button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="fade-effects-card">
+            <h3 id="fade-title">2. Fade Effects</h3>
+            <div id="fade-box" class="demo-box"></div>
+            <div class="btn-group">
+                <button id="btn-fadeIn" title="Fade in smoothly"><code>fadeIn()</code></button>
+                <button id="btn-fadeOut" title="Fade out smoothly"><code>fadeOut()</code></button>
+                <button id="btn-fadeToggle" title="Toggle fade"><code>fadeToggle()</code></button>
+                <button id="btn-fadeTo" title="Fade to 0.4 opacity"><code>fadeTo(0.4)</code></button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="slide-effects-card">
+            <h3 id="slide-title">3. Sliding Effects</h3>
+            <div id="slide-box" class="demo-box"></div>
+            <div class="btn-group">
+                <button id="btn-slideDown" title="Slide down"><code>slideDown()</code></button>
+                <button id="btn-slideUp" title="Slide up"><code>slideUp()</code></button>
+                <button id="btn-slideToggle" title="Toggle slide"><code>slideToggle()</code></button>
+            </div>
+        </div>
+
+        <div class="demo-card" id="animate-effects-card">
+            <h3 id="animate-title">4. Custom Animation & Control</h3>
+            <div id="animate-box" class="demo-box">MOVING</div>
+            <div class="btn-group">
+                <button id="btn-animate" title="Horizontal move & resize"><code>animate()</code></button>
+                <button id="btn-stop" title="Stop current animation"><code>stop()</code></button>
+                <button id="btn-finish" title="Finish all animations"><code>finish()</code></button>
+                <button id="btn-delay" title="Wait for 1s then hide"><code>delay().hide()</code></button>
+                <button id="btn-queue" title="Log queue length"><code>queue()</code></button>
+                <button id="btn-clearQueue" title="Clear animation queue"><code>clearQueue()</code></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
